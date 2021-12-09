@@ -8,7 +8,13 @@ class HomePage extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+   return GetBuilder<HomeController>(
+     builder: (_) =>Scaffold(
+       body: Container(
+         child: Text('hello'),
+
+       ),
+     ),
+   );
   }
 }

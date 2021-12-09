@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'config/routes/app_pages.dart';
+import 'config/routes/route_name.dart';
 import 'config/themes/dark_theme.dart';
 import 'config/themes/light_theme.dart';
 import 'utils/services/local_storage_service.dart';
@@ -20,12 +21,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+
       getPages: AppPages.appPages,
       title: 'Flutter Demo',
       theme: lightTheme,
       darkTheme: darkTheme,
       themeMode: ThemeMode.light,
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
       locale: TranslationService.locale,
       fallbackLocale: TranslationService.fallbackLocale,
       translations: TranslationService(),
